@@ -13,7 +13,7 @@ public class BulletBehaviour : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit: " + other.gameObject.name);
+        Debug.Log("Bullet Hit: " + other.gameObject.name);
 
         if (other.gameObject.CompareTag("Dummy"))
         {

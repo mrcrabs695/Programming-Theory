@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private float speed = 5;
     private float jumpForce = 5;
     private float sprintMultiplier = 2;
-    public int health {get; private set;} = 50;
+    public int health {get; private set;}
 
     private float horizontal;
     private float vertical;
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         // sets camera and rigid body variables
         playerCamera = GameObject.Find("Main Camera");
         playerRb = GetComponent<Rigidbody>();
+        health = 50;
         
     }
 
@@ -61,15 +62,20 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
         }
 
+        //? might make smart and armed dummy separate if statements so you can change each ones health
         if (collision.gameObject.CompareTag("Smart dummy") || collision.gameObject.CompareTag("Armed dummy"))
         {
             health--;
+            Debug.Log("Player health: " + health);
         }
 
         if (collision.gameObject.CompareTag("Bullet"))
         {
             health -= 5;
+            Debug.Log("Player health: " + health);
         }
+
+        Debug.Log("Player collided with: " + collision.gameObject.name);
     }
 
     void MainMovement()
