@@ -15,7 +15,7 @@ public class HealthManager : MonoBehaviour
         }
     }
 
-    void Update()
+    void LateUpdate()
     {
         if(health <= 0)
         {

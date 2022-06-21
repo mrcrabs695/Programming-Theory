@@ -5,7 +5,6 @@ using UnityEngine;
 public class GunShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
-    [SerializeField] private GameObject dummy;
     private GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -20,12 +19,6 @@ public class GunShoot : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             Instantiate(bullet, transform.position, transform.rotation);
-        }
-
-        if (Input.GetKeyDown("b"))
-        {
-            Instantiate(dummy, new Vector3(0, 2, 0), dummy.transform.rotation);
-        }
-        
+        } 
     }
 }
