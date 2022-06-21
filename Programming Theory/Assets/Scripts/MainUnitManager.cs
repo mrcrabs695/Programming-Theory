@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MainUnitManager : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    private Rigidbody enemyRb;
-    private GameObject player;
+    [SerializeField] protected float speed;
+    protected Rigidbody enemyRb;
+    protected GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class MainUnitManager : MonoBehaviour
         }
     }
 
-    void FollowPlayer()
+    public virtual void FollowPlayer()
     {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
         

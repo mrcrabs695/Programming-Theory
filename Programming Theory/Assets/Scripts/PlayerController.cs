@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Player health: " + health);
         }
 
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Enemy Bullet"))
         {
             health -= 5;
             Debug.Log("Player health: " + health);
