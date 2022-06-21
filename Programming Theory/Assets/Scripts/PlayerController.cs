@@ -104,6 +104,11 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
         }
+
+        if (transform.position.y <= -50)
+        {
+            transform.position = new Vector3(0, 2, 0);
+        }
     }
 
     void PlayerLook()
