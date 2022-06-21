@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Smart dummy
   - Armed dummy
+  - Enemy Bullet
   layers:
   - Default
   - TransparentFX

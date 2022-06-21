@@ -1498,6 +1498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f4a16fb26b8cc2498079ac1cf028533, type: 3}
+--- !u!1 &2398292763636773074 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6813344798008896795, guid: 8d55f3559fea3d44785f0c770c7df266, type: 3}
+  m_PrefabInstance: {fileID: 9206956813892115913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4364931617466321513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1578,14 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5884349876546274587, guid: 8d55f3559fea3d44785f0c770c7df266, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 852843686412467112, guid: 81733c402619dfb49b1c069fd3b7ca9d, type: 3}
+    - target: {fileID: 5884349876546274587, guid: 8d55f3559fea3d44785f0c770c7df266, type: 3}
+      propertyPath: mainTransform
+      value: 
+      objectReference: {fileID: 2398292763636773074}
     - target: {fileID: 5935972021658343668, guid: 8d55f3559fea3d44785f0c770c7df266, type: 3}
       propertyPath: m_RootOrder
       value: 7
