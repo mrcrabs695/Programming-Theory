@@ -33,6 +33,14 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+        }
+    }
+
     void MainMovement()
     {
         horizontal = Input.GetAxis("Horizontal");
@@ -54,6 +62,7 @@ public class PlayerController : MonoBehaviour
         if(isOnGround & Input.GetButtonDown("Jump"))
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isOnGround = false;
         }
     }
 
