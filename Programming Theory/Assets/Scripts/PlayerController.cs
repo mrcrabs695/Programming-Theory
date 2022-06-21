@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private float speed = 5;
     private float jumpForce = 5;
     private float sprintMultiplier = 2;
+    public int health {get; private set;} = 50;
 
     private float horizontal;
     private float vertical;
@@ -37,19 +38,37 @@ public class PlayerController : MonoBehaviour
     //! Stop forgetting to add new methods where they need to be called smh
     void LateUpdate()
     {
+        if (!GameManager.Instance.isGameOver)
+        {
         MainMovement();
         PlayerLook();
         WeaponSwitcher();
         DummyManualSpawn();
+        }
+
+        if (health <= 0)
+        {
+            GameManager.Instance.isGameOver = true;
+        }
         
     }
 
-    // basic ground check to prevent jumping midair
     void OnCollisionEnter(Collision collision)
     {
+        // basic ground check to prevent jumping midair
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+        }
+
+        if (collision.gameObject.CompareTag("Smart dummy") || collision.gameObject.CompareTag("Armed dummy"))
+        {
+            health--;
+        }
+
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            health -= 5;
         }
     }
 
