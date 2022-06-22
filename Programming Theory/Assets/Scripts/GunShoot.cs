@@ -5,11 +5,11 @@ using UnityEngine;
 public class GunShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
-    private GameObject player;
+    [SerializeField] private float speed;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
         
     }
 
@@ -18,7 +18,9 @@ public class GunShoot : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1") && !GameManager.Instance.isGameOver)
         {
-            Instantiate(bullet, transform.position, transform.rotation);
+            Rigidbody projectile = Instantiate(bullet, transform.position, transform.rotation).GetComponent<Rigidbody>();
+
+            projectile.velocity = transform.TransformDirection(new Vector3(0, 0, speed));
         } 
     }
 }
