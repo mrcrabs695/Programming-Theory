@@ -7,7 +7,7 @@ public class BulletBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right * 0.5f);
+        //transform.Translate(Vector3.right * 0.5f);
         
     }
 
