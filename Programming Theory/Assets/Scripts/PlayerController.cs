@@ -78,6 +78,16 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Player collided with: " + collision.gameObject.name);
     }
 
+    void OnTriggerEnter(Collision hit)
+    {
+        if (hit.gameObject.CompareTag("Enemy Bullet"))
+        {
+            health -= 5;
+            Debug.Log("Player health: " + health);
+        }
+        Debug.Log("Trigger");
+    }
+
     void MainMovement()
     {
         // sets input variables to their specified input

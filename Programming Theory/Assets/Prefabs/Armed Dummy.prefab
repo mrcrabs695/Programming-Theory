@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5935972021658343668}
+  - component: {fileID: 7895938743643605232}
   m_Layer: 0
   m_Name: Armed Dummy
   m_TagString: Untagged
@@ -32,6 +33,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7895938743643605232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127437607186275320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fb534231bd3a24eaed5a83ae74a88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2743269792794293786
 GameObject:
   m_ObjectHideFlags: 0
@@ -46,7 +59,6 @@ GameObject:
   - component: {fileID: 2660024454871840387}
   - component: {fileID: 7465648058919617012}
   - component: {fileID: 2029302565917434112}
-  - component: {fileID: 1813030121688723004}
   - component: {fileID: 5884349876546274587}
   m_Layer: 0
   m_Name: Armed Dummy
@@ -164,18 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 40
---- !u!114 &1813030121688723004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2743269792794293786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0fb534231bd3a24eaed5a83ae74a88f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5884349876546274587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,10 +188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c121ee56b05ed4884f1510d6bc0042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 1
   bulletPrefab: {fileID: 852843686412467112, guid: 81733c402619dfb49b1c069fd3b7ca9d, type: 3}
-  shootingSpeed: 1
-  mainTransform: {fileID: 6813344798008896795}
+  shootingSpeed: 0.2
+  bulletSpeed: 200
+  gunTransform: {fileID: 6813344798008896795}
 --- !u!1 &6813344798008896795
 GameObject:
   m_ObjectHideFlags: 0

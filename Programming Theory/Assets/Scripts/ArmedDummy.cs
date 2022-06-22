@@ -6,7 +6,8 @@ public class ArmedDummy : MainUnitManager
 {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float shootingSpeed = 1;
-    [SerializeField] protected GameObject mainTransform;
+    [SerializeField] private float bulletSpeed = 200;
+    [SerializeField] protected GameObject gunTransform;
 
     void Start()
     {
@@ -42,7 +43,9 @@ public class ArmedDummy : MainUnitManager
         while (!GameManager.Instance.isGameOver)
         {
             yield return new WaitForSeconds(shootingSpeed);
-            Instantiate(bulletPrefab, mainTransform.transform.position, mainTransform.transform.rotation);
+            Rigidbody projectile = Instantiate(bulletPrefab, gunTransform.transform.position, gunTransform.transform.rotation).GetComponent<Rigidbody>();
+
+            projectile.velocity = transform.TransformDirection(new Vector3(0, 0, bulletSpeed));
         }
     }
 }
