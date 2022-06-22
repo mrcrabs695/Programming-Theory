@@ -62,8 +62,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2743269792794293786}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.779161, y: 2.1353624, z: 11.7313385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -189,8 +189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  bulletPrefab: {fileID: 2309035174318756756, guid: 3ca745be1d635e44b826e12efc1dd27b, type: 3}
+  bulletPrefab: {fileID: 852843686412467112, guid: 81733c402619dfb49b1c069fd3b7ca9d, type: 3}
   shootingSpeed: 1
+  mainTransform: {fileID: 6813344798008896795}
 --- !u!1 &6813344798008896795
 GameObject:
   m_ObjectHideFlags: 0

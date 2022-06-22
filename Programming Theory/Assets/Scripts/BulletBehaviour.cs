@@ -18,7 +18,7 @@ public class BulletBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("Dummy"))
         {
             //Destroy(other.gameObject);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
