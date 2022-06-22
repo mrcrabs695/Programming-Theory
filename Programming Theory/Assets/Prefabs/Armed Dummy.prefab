@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ec095e3ff9904458baca3fee159020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 40
+  health: 30
 --- !u!114 &5884349876546274587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   bulletPrefab: {fileID: 852843686412467112, guid: 81733c402619dfb49b1c069fd3b7ca9d, type: 3}
-  shootingSpeed: 0.2
+  shootingSpeed: 1
   bulletSpeed: 200
   gunTransform: {fileID: 6813344798008896795}
 --- !u!1 &6813344798008896795

@@ -26,10 +26,13 @@ public class MainUnitManager : MonoBehaviour
 
     public virtual void FollowPlayer()
     {
+        if (!GameManager.Instance.isGameOver)
+        {
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
         
         enemyRb.AddForce(lookDirection * speed);
         transform.LookAt(player.transform);
+        }
 
     }
 }

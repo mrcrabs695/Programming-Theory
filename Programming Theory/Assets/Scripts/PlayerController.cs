@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject dummy;
     [SerializeField] private GameObject smartDummy;
     [SerializeField] private GameObject armedDummy;
+    [SerializeField] private TextMeshProUGUI healthText;
 
     private Rigidbody playerRb;
     private float cameraSensitivity = 5;
@@ -65,27 +67,25 @@ public class PlayerController : MonoBehaviour
         //? might make smart and armed dummy separate if statements so you can change each ones health
         if (collision.gameObject.CompareTag("Smart dummy") || collision.gameObject.CompareTag("Armed dummy"))
         {
-            health--;
-            Debug.Log("Player health: " + health);
-        }
-
-        if (collision.gameObject.CompareTag("Enemy Bullet"))
-        {
             health -= 5;
+            healthText.text = "Health: " + health;
+
             Debug.Log("Player health: " + health);
         }
 
         Debug.Log("Player collided with: " + collision.gameObject.name);
     }
 
-    void OnTriggerEnter(Collision hit)
+    // i had to move this if statement to OnTriggerEnter as the bullet has a trigger collider
+    private void OnTriggerEnter(Collider hit) 
     {
         if (hit.gameObject.CompareTag("Enemy Bullet"))
         {
             health -= 5;
+            healthText.text = "Health: " + health;
+
             Debug.Log("Player health: " + health);
         }
-        Debug.Log("Trigger");
     }
 
     void MainMovement()
@@ -149,6 +149,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //? this will either be debug only or put in a sandbox like scene, like the current one
     void DummyManualSpawn()
     {
         Vector3 spawnPos = new Vector3(0, 2, 0);

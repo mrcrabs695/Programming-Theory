@@ -29,15 +29,6 @@ public class ArmedDummy : MainUnitManager
         }
     }
 
-    public override void FollowPlayer()
-    {
-        Vector3 lookDirection = (player.transform.position - transform.position).normalized;
-        
-        enemyRb.AddForce(lookDirection * speed);
-        transform.LookAt(player.transform);
-
-    }
-
     IEnumerator ShootDelay()
     {
         while (!GameManager.Instance.isGameOver)
