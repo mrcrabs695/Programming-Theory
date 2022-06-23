@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AutoShotgun : GunShoot
 {
+    // POLYMORPHISM
     protected override void Shoot()
     {
         if(Input.GetButton("Fire1") && !GameManager.Instance.isGameOver)
