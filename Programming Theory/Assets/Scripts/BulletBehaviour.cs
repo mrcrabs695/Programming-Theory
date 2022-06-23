@@ -15,12 +15,9 @@ public class BulletBehaviour : MonoBehaviour
     {
         //Debug.Log("Bullet Hit: " + other.gameObject.name);
 
-        if (other.gameObject.CompareTag("Dummy"))
+        if (!other.gameObject.CompareTag("Bullet"))
         {
-            //Destroy(other.gameObject);
-            
+            Destroy(gameObject);
         }
-
-        Destroy(gameObject);
     }
 }

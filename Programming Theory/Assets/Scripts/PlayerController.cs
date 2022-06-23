@@ -143,7 +143,21 @@ public class PlayerController : MonoBehaviour
             active = weapons[0].activeSelf;
             active ^= true;
             
+            weapons[1].SetActive(false);
             weapons[0].SetActive(active);
+
+            //Debug.Log("Weapon switched, shotgun active: " + active);
+            
+        }
+
+        if (Input.GetKeyDown("2"))
+        {
+            bool active;
+            active = weapons[1].activeSelf;
+            active ^= true;
+            
+            weapons[0].SetActive(false);
+            weapons[1].SetActive(active);
 
             //Debug.Log("Weapon switched, shotgun active: " + active);
             

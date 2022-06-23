@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class GunShoot : MonoBehaviour
 {
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private float speed;
+    [SerializeField] protected GameObject bullet;
+    [SerializeField] protected float speed;
 
     // Update is called once per frame
     void Update()
+    {
+        Shoot();
+    }
+
+    protected virtual void Shoot()
     {
         if(Input.GetButtonDown("Fire1") && !GameManager.Instance.isGameOver)
         {
