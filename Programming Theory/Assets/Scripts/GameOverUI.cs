@@ -27,6 +27,11 @@ public class GameOverUI : MonoBehaviour
     public void RestartButton()
     {
         GameManager.Instance.isGameOver = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MenuButton()
+    {
         SceneManager.LoadScene(0);
     }
 }
