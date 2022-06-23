@@ -70,10 +70,10 @@ public class PlayerController : MonoBehaviour
             health -= 5;
             healthText.text = "Health: " + health;
 
-            Debug.Log("Player health: " + health);
+            //Debug.Log("Player health: " + health);
         }
 
-        Debug.Log("Player collided with: " + collision.gameObject.name);
+        //Debug.Log("Player collided with: " + collision.gameObject.name);
     }
 
     // i had to move this if statement to OnTriggerEnter as the bullet has a trigger collider
@@ -84,10 +84,11 @@ public class PlayerController : MonoBehaviour
             health -= 5;
             healthText.text = "Health: " + health;
 
-            Debug.Log("Player health: " + health);
+            //Debug.Log("Player health: " + health);
         }
     }
 
+    // ENCAPSULATION
     void MainMovement()
     {
         // sets input variables to their specified input
@@ -144,7 +145,7 @@ public class PlayerController : MonoBehaviour
             
             weapons[0].SetActive(active);
 
-            Debug.Log("Weapon switched, shotgun active: " + active);
+            //Debug.Log("Weapon switched, shotgun active: " + active);
             
         }
     }

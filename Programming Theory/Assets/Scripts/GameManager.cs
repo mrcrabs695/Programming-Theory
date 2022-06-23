@@ -6,6 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    // ENCAPSULATION
     public static GameManager Instance {get; private set;}
     public bool isGameOver = false;
 

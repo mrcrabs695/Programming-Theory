@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ArmedDummy : MainUnitManager
 {
+    // INHERITANCE
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float shootingSpeed = 1;
     [SerializeField] private float bulletSpeed = 200;
